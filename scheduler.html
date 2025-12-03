@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Schedule a meeting with Divya Pateliya - Find the best time across timezones">
+    <title>Schedule a Meeting | Divya Pateliya</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="scheduler.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">DP</a>
+            <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="scheduler.html" class="nav-link active">Schedule Meeting</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Scheduler Section -->
+    <section class="scheduler-section">
+        <div class="container">
+            <div class="scheduler-header">
+                <h1 class="scheduler-title">Let's Find a Time to Connect</h1>
+                <p class="scheduler-subtitle">
+                    I'm based in <strong>Calgary, Alberta (Mountain Time)</strong>.
+                    Enter your timezone below and I'll show you the best times for us to meet during business hours.
+                </p>
+            </div>
+
+            <div class="scheduler-container">
+                <!-- Timezone Selection Card -->
+                <div class="scheduler-card">
+                    <div class="card-header">
+                        <h2>🌍 Your Location</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="timezone-select">Select Your Timezone</label>
+                            <select id="timezone-select" class="timezone-select">
+                                <option value="">-- Choose your timezone --</option>
+                            </select>
+                        </div>
+                        <div class="current-time-display">
+                            <div class="time-card">
+                                <div class="time-label">Your Current Time</div>
+                                <div id="visitor-time" class="time-value">--:--</div>
+                                <div id="visitor-timezone" class="timezone-name">Select timezone first</div>
+                            </div>
+                            <div class="time-card">
+                                <div class="time-label">My Current Time (Calgary)</div>
+                                <div id="my-time" class="time-value">--:--</div>
+                                <div class="timezone-name">America/Edmonton (MT)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Meeting Times Card -->
+                <div class="scheduler-card">
+                    <div class="card-header">
+                        <h2>⏰ Best Meeting Times</h2>
+                    </div>
+                    <div class="card-body">
+                        <div id="meeting-times-container">
+                            <div class="placeholder-message">
+                                <div class="placeholder-icon">🕐</div>
+                                <p>Select your timezone above to see available meeting times</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Time Comparison Chart -->
+                <div class="scheduler-card full-width">
+                    <div class="card-header">
+                        <h2>📊 Time Comparison Chart</h2>
+                    </div>
+                    <div class="card-body">
+                        <div id="time-chart-container">
+                            <div class="placeholder-message">
+                                <div class="placeholder-icon">📈</div>
+                                <p>Visual comparison will appear here once you select your timezone</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Options -->
+                <div class="scheduler-card full-width contact-options">
+                    <div class="card-header">
+                        <h2>📧 Ready to Schedule?</h2>
+                    </div>
+                    <div class="card-body">
+                        <p class="contact-message">
+                            Once you've found a suitable time, reach out to me via email to confirm the meeting!
+                        </p>
+                        <div class="contact-buttons">
+                            <a href="mailto:pateliyandivya@gmail.com?subject=Meeting Request" class="btn btn-primary">
+                                📧 Email Me
+                            </a>
+                            <a href="https://www.linkedin.com/in/divya-pateliya" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-secondary">
+                                💼 Connect on LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Divya Pateliya. Built with passion and code.</p>
+        </div>
+    </footer>
+
+    <script src="scheduler.js"></script>
+</body>
+
+</html>
